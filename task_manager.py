@@ -55,7 +55,6 @@ def task_manager():
                         
                         if 1 <= task_number <= len(tasks):
                             del tasks[task_number - 1]
-                            # Не забываем сохранить изменения в файл
                             with open('tasks.txt', 'w') as file:
                                 file.writelines(tasks)
                             print('Задача удалена.')
@@ -63,7 +62,6 @@ def task_manager():
                             print('Задачи с таким номером нет.')
                             
                     except ValueError:
-                        # Сюда программа попадет, если ввели букву
                         print('Ошибка: Пожалуйста, введите цифру, а не текст.')
                     print('================================')
                     check_1 = True
